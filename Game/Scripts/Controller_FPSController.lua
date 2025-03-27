@@ -3,6 +3,9 @@ local Controller_FPSController =
     currentWalkSpeed        = 1.0,
     currentRunSpeed         = 1.0,
     currentJumpStrength     = 1.0,
+    initialFOV              = 0.0,
+    runningFOVMultiplier    = 1.2,
+    lerpSpeedFOV            = 10,
     readyToGo               = false,
     walkSpeed               = 3.5,
     runSpeed                = 5.5,
@@ -11,7 +14,8 @@ local Controller_FPSController =
     mouseLook               = Vector2.new(180, -20),
     previousMouse           = Vector2.new(0, 0),
     firstMouse              = true,
-    camera                   = nil,
+    camera                  = nil,
+    CameraComponent         = nil,
     mouseLocked             = true,
     isGrounded              = false,
     breathScript            = nil,
@@ -24,6 +28,8 @@ local Controller_FPSController =
 
 function Controller_FPSController:OnAwake()
     self.camera = Scenes.GetCurrentScene():FindActorByName("Player Camera")
+    self.CameraComponent = self.camera:GetCamera()
+    self.initialFOV = self.CameraComponent:GetFov()
     self.physicalCapsule = self.owner:GetPhysicalCapsule()
     self.ballRecall = Scenes.GetCurrentScene():FindActorByName("Recall Source"):GetBehaviour("Gameplay_BallRecall")
 end
@@ -61,6 +67,8 @@ function Controller_FPSController:OnUpdate(deltaTime)
         self:HandleMovement(deltaTime)
         self:HandleRotation(deltaTime)
     end
+
+    self:UpdateCameraFOV(deltaTime)
 end
 
 function Controller_FPSController:HandleMovement(deltaTime)
@@ -75,7 +83,7 @@ function Controller_FPSController:HandleMovement(deltaTime)
     if Inputs.GetKey(Key.S) then velocity = velocity - forward end
     velocity = Vector3.Normalize(velocity)
 
-    canRun = Vector3.Dot(velocity, self.owner:GetTransform():GetForward()) > 0 and not self.ballRecall.recalling
+    canRun = Vector3.Dot(velocity, self.owner:GetTransform():GetForward()) > 0 and not self.ballRecall.recalling and self.readyToGo
 
     self.runAsked = Inputs.GetKey(Key.LEFT_SHIFT)
     self.walkAsked = not self.runAsked
@@ -138,30 +146,15 @@ function Controller_FPSController:ResetRotation()
 end
 
 function Controller_FPSController:IsGroundedAtOffset(offset)
-    Hit = Physics.Raycast(self.owner:GetTransform():GetWorldPosition() + offset - Vector3.new(0, self.physicalCapsule:GetHeight() * 0.9, 0), Vector3.new(0, -1, 0), 0.2)
-    if Hit ~= nil then
-        if Hit.FirstResultObject ~= nil and not Hit.FirstResultObject:IsTrigger() then
-            return true
-        end
-
-        for key,value in ipairs(Hit.ResultObjects) do
-            if value:GetOwner():GetTag() ~= "Player" and not value:IsTrigger() then
-                return true
-            end
-        end
-    end
-end
-
-function Controller_FPSController:IsGroundedAtOffset(offset)
     physicalOffset = Vector3.new(0, self.physicalCapsule:GetHeight() / 2 + self.physicalCapsule:GetRadius() - 0.1, 0)
     start = self.owner:GetTransform():GetWorldPosition() + offset - physicalOffset
-    Hit = Physics.Raycast(start, Vector3.new(0, -1, 0), 0.2)
-    if Hit ~= nil then
-        if Hit.FirstResultObject ~= nil and Hit.FirstResultObject:GetOwner():GetTag() ~= "Player" and not Hit.FirstResultObject:IsTrigger() then
+    hit = Physics.Raycast(start, Vector3.new(0, -1, 0), 0.2)
+    if hit ~= nil then
+        if hit.FirstResultObject ~= nil and hit.FirstResultObject:GetOwner():GetTag() ~= "Player" and not hit.FirstResultObject:IsTrigger() then
             return true
         end
 
-        for key,value in ipairs(Hit.ResultObjects) do
+        for key,value in ipairs(hit.ResultObjects) do
             if value:GetOwner():GetTag() ~= "Player" and not value:IsTrigger() then
                 return true
             end
@@ -182,6 +175,17 @@ function Controller_FPSController:CheckGround()
         self.isGrounded = true
     else
         self.isGrounded = false
+    end
+end
+
+function Controller_FPSController:UpdateCameraFOV(deltaTime)
+    local targetFOV = self.running and self.runAsked and self.initialFOV * self.runningFOVMultiplier or self.initialFOV
+
+    local currentCameraFOV = self.CameraComponent:GetFov()
+    currentCameraFOV = Math.Lerp(currentCameraFOV, targetFOV, self.lerpSpeedFOV * deltaTime)
+
+    if self.CameraComponent then
+        self.CameraComponent:SetFov(currentCameraFOV)
     end
 end
 
