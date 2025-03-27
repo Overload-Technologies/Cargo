@@ -5,7 +5,7 @@ local Controller_FPSController =
     currentJumpStrength     = 1.0,
     initialFOV              = 0.0,
     runningFOVMultiplier    = 1.2,
-    LerpSpeedFOV            = 10,
+    lerpSpeedFOV            = 10,
     readyToGo               = false,
     walkSpeed               = 3.5,
     runSpeed                = 5.5,
@@ -148,13 +148,13 @@ end
 function Controller_FPSController:IsGroundedAtOffset(offset)
     physicalOffset = Vector3.new(0, self.physicalCapsule:GetHeight() / 2 + self.physicalCapsule:GetRadius() - 0.1, 0)
     start = self.owner:GetTransform():GetWorldPosition() + offset - physicalOffset
-    Hit = Physics.Raycast(start, Vector3.new(0, -1, 0), 0.2)
-    if Hit ~= nil then
-        if Hit.FirstResultObject ~= nil and Hit.FirstResultObject:GetOwner():GetTag() ~= "Player" and not Hit.FirstResultObject:IsTrigger() then
+    hit = Physics.Raycast(start, Vector3.new(0, -1, 0), 0.2)
+    if hit ~= nil then
+        if hit.FirstResultObject ~= nil and hit.FirstResultObject:GetOwner():GetTag() ~= "Player" and not hit.FirstResultObject:IsTrigger() then
             return true
         end
 
-        for key,value in ipairs(Hit.ResultObjects) do
+        for key,value in ipairs(hit.ResultObjects) do
             if value:GetOwner():GetTag() ~= "Player" and not value:IsTrigger() then
                 return true
             end
@@ -182,7 +182,7 @@ function Controller_FPSController:UpdateCameraFOV(deltaTime)
     local targetFOV = self.running and self.runAsked and self.initialFOV * self.runningFOVMultiplier or self.initialFOV
 
     local currentCameraFOV = self.CameraComponent:GetFov()
-    currentCameraFOV = Math.Lerp(currentCameraFOV, targetFOV, self.LerpSpeedFOV * deltaTime)
+    currentCameraFOV = Math.Lerp(currentCameraFOV, targetFOV, self.lerpSpeedFOV * deltaTime)
 
     if self.CameraComponent then
         self.CameraComponent:SetFov(currentCameraFOV)
