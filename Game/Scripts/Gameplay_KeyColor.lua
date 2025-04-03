@@ -5,7 +5,7 @@ local Gameplay_KeyColor =
     color = nil,
 }
 
-function Gameplay_KeyColor:OnStart()
+function Gameplay_KeyColor:OnAwake()
     self.materialRenderer = Scenes.GetCurrentScene():FindActorByName("Key Model"):GetMaterialRenderer()
     self.light = Scenes.GetCurrentScene():FindActorByName("Key Light"):GetLight()
 
