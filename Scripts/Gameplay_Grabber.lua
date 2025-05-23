@@ -52,7 +52,7 @@ function Gameplay_Grabber:Throw(deltaTime)
     self.firstThrow = false
     self.gunShaker:Shake(0.2, 0.015)
     self.grabbed:Drop()
-    self.grabbed.owner:GetPhysicalObject():AddImpulse(self.owner:GetTransform():GetForward() * 20, 1.0)
+    self.grabbed.owner:GetPhysicalObject():AddImpulse(self.owner:GetTransform():GetForward() * 25, 1.0)
     Scenes.GetCurrentScene():FindActorByName("Elec Shot Sound"):GetBehaviour("Sound_ElectricShot"):Play()
     self.grabbed = nil
 end

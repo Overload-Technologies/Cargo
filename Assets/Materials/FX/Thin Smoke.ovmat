@@ -1,6 +1,8 @@
 <root>
     <shader>Shaders\Smoke.ovfx</shader>
     <settings>
+        <support_orthographic>true</support_orthographic>
+        <support_perspective>true</support_perspective>
         <blendable>true</blendable>
         <backface_culling>true</backface_culling>
         <frontface_culling>false</frontface_culling>
@@ -9,7 +11,9 @@
         <color_writing>true</color_writing>
         <cast_shadows>false</cast_shadows>
         <receive_shadows>false</receive_shadows>
+        <user_interface>false</user_interface>
         <gpu_instances>100</gpu_instances>
+        <draw_order>1000</draw_order>
     </settings>
     <uniforms>
         <uniform>
@@ -76,4 +80,5 @@
             </value>
         </uniform>
     </uniforms>
+    <features></features>
 </root>

@@ -11,7 +11,7 @@
                     <component>
                         <type>class OvCore::ECS::Components::CCamera</type>
                         <data>
-                            <fov>55</fov>
+                            <fov>60</fov>
                             <size>-1.0737418e+08</size>
                             <near>0.001</near>
                             <far>1000</far>
@@ -33,10 +33,8 @@
                         <type>class OvCore::ECS::Components::CPostProcessStack</type>
                         <data>
                             <bloom_enabled>true</bloom_enabled>
-                            <bloom_threshold>1.01</bloom_threshold>
-                            <bloom_radius>5</bloom_radius>
-                            <bloom_kernel_size>5</bloom_kernel_size>
-                            <bloom_intensity>0.2</bloom_intensity>
+                            <bloom_intensity>1</bloom_intensity>
+                            <bloom_passes>6</bloom_passes>
                             <auto_exposure_enabled>true</auto_exposure_enabled>
                             <auto_exposure_center_weight_bias>0.5</auto_exposure_center_weight_bias>
                             <auto_exposure_luminance_min>-2</auto_exposure_luminance_min>
@@ -47,7 +45,7 @@
                             <auto_exposure_speed_down>1</auto_exposure_speed_down>
                             <tonemapping_enabled>true</tonemapping_enabled>
                             <tonemapping_exposure>1</tonemapping_exposure>
-                            <tonemapping_mode>0</tonemapping_mode>
+                            <tonemapping_mode>5</tonemapping_mode>
                             <tonemapping_gamma_correction>true</tonemapping_gamma_correction>
                             <fxaa_enabled>true</fxaa_enabled>
                         </data>
@@ -384,7 +382,7 @@
                                 <y>0.92206943</y>
                                 <z>1</z>
                             </color>
-                            <intensity>5</intensity>
+                            <intensity>1</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>1</quadratic>
@@ -429,7 +427,7 @@
                                 <y>0.92819142</y>
                                 <z>1</z>
                             </color>
-                            <intensity>3</intensity>
+                            <intensity>1</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>1</quadratic>
@@ -554,692 +552,6 @@
                     </component>
                 </components>
                 <behaviours/>
-            </actor>
-            <actor>
-                <name>Lava Sources</name>
-                <tag></tag>
-                <active>false</active>
-                <id>35</id>
-                <parent>27</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>25.386623</x>
-                                <y>-1.9556947</y>
-                                <z>2.1913528</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
-                <name>Lava 1</name>
-                <tag>Horizontal</tag>
-                <active>true</active>
-                <id>36</id>
-                <parent>44</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>0.11907995</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>2</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>1</quadratic>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>2.5369999</x>
-                                <y>-1.006</y>
-                                <z>2.2909999</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours>
-                    <behaviour>
-                        <type>Animation_LavaLight</type>
-                        <data/>
-                    </behaviour>
-                </behaviours>
-            </actor>
-            <actor>
-                <name>Lava 3</name>
-                <tag>Horizontal</tag>
-                <active>true</active>
-                <id>38</id>
-                <parent>44</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>0.11907995</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>2</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>1</quadratic>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>2.5369999</x>
-                                <y>-1.006</y>
-                                <z>-5.7589998</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours>
-                    <behaviour>
-                        <type>Animation_LavaLight</type>
-                        <data/>
-                    </behaviour>
-                </behaviours>
-            </actor>
-            <actor>
-                <name>Lava 4</name>
-                <tag>Horizontal</tag>
-                <active>true</active>
-                <id>39</id>
-                <parent>44</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>0.11907995</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>2</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>1</quadratic>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>2.5369999</x>
-                                <y>-1.006</y>
-                                <z>7.0910001</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours>
-                    <behaviour>
-                        <type>Animation_LavaLight</type>
-                        <data/>
-                    </behaviour>
-                </behaviours>
-            </actor>
-            <actor>
-                <name>Lava 6</name>
-                <tag></tag>
-                <active>true</active>
-                <id>41</id>
-                <parent>45</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>0.11907995</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>2</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>1</quadratic>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>-2.6630001</x>
-                                <y>-1.006</y>
-                                <z>-7.9089999</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours>
-                    <behaviour>
-                        <type>Animation_LavaLight</type>
-                        <data/>
-                    </behaviour>
-                </behaviours>
-            </actor>
-            <actor>
-                <name>Lava slot 1</name>
-                <tag></tag>
-                <active>true</active>
-                <id>44</id>
-                <parent>35</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
-                <name>Lava slot 2</name>
-                <tag></tag>
-                <active>true</active>
-                <id>45</id>
-                <parent>35</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
-                <name>Lava slot 3</name>
-                <tag></tag>
-                <active>true</active>
-                <id>46</id>
-                <parent>35</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>2.9000001</x>
-                                <y>0</y>
-                                <z>3</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0.21089831</y>
-                                <z>0</z>
-                                <w>0.97750801</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
-                <name>Lava 5</name>
-                <tag></tag>
-                <active>true</active>
-                <id>47</id>
-                <parent>46</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>0.11907995</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>2</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>0.5</quadratic>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>-0.81300002</x>
-                                <y>-1.006</y>
-                                <z>-7.3590002</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours>
-                    <behaviour>
-                        <type>Animation_LavaLight</type>
-                        <data/>
-                    </behaviour>
-                </behaviours>
-            </actor>
-            <actor>
-                <name>Lava 6</name>
-                <tag></tag>
-                <active>true</active>
-                <id>48</id>
-                <parent>46</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>0.11907995</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>2</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>1</quadratic>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>-3.1129999</x>
-                                <y>-1.006</y>
-                                <z>-10.309</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours>
-                    <behaviour>
-                        <type>Animation_LavaLight</type>
-                        <data/>
-                    </behaviour>
-                </behaviours>
-            </actor>
-            <actor>
-                <name>Lava slot 4</name>
-                <tag></tag>
-                <active>true</active>
-                <id>49</id>
-                <parent>35</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>0.15000001</x>
-                                <y>0</y>
-                                <z>7.9499998</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
-                <name>Lava 5</name>
-                <tag></tag>
-                <active>false</active>
-                <id>50</id>
-                <parent>49</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>0.11907995</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>2</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>0.5</quadratic>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>0.63700002</x>
-                                <y>-1.006</y>
-                                <z>-7.9089999</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours>
-                    <behaviour>
-                        <type>Animation_LavaLight</type>
-                        <data/>
-                    </behaviour>
-                </behaviours>
-            </actor>
-            <actor>
-                <name>Lava 6</name>
-                <tag></tag>
-                <active>true</active>
-                <id>51</id>
-                <parent>49</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>0.11907995</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>2</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>0.5</quadratic>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>-2.6630001</x>
-                                <y>-1.006</y>
-                                <z>-7.9089999</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours>
-                    <behaviour>
-                        <type>Animation_LavaLight</type>
-                        <data/>
-                    </behaviour>
-                </behaviours>
-            </actor>
-            <actor>
-                <name>Lava slot 5</name>
-                <tag></tag>
-                <active>true</active>
-                <id>52</id>
-                <parent>35</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>-3.8</x>
-                                <y>0</y>
-                                <z>11.05</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>-0.16031189</y>
-                                <z>0</z>
-                                <w>0.98706639</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
-                <name>Lava 5</name>
-                <tag></tag>
-                <active>true</active>
-                <id>53</id>
-                <parent>52</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>0.11907995</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>2</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>0.5</quadratic>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>0.88700002</x>
-                                <y>-1.006</y>
-                                <z>-7.309</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours>
-                    <behaviour>
-                        <type>Animation_LavaLight</type>
-                        <data/>
-                    </behaviour>
-                </behaviours>
-            </actor>
-            <actor>
-                <name>Lava 6</name>
-                <tag></tag>
-                <active>true</active>
-                <id>54</id>
-                <parent>52</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>0.11907995</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>2</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>0.5</quadratic>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>-0.66299999</x>
-                                <y>-0.85600001</y>
-                                <z>-3.6589999</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours>
-                    <behaviour>
-                        <type>Animation_LavaLight</type>
-                        <data/>
-                    </behaviour>
-                </behaviours>
             </actor>
             <actor>
                 <name>Colliders</name>
@@ -1596,15 +908,15 @@
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
                             <position>
-                                <x>-2.0999999</x>
-                                <y>4.1609998</y>
-                                <z>7.6999998</z>
+                                <x>-2.4576311</x>
+                                <y>5.3741693</y>
+                                <z>8.1580658</z>
                             </position>
                             <rotation>
-                                <x>4.3711388e-08</x>
-                                <y>-1</y>
-                                <z>7.5497901e-08</z>
-                                <w>-3.3001181e-15</w>
+                                <x>-4.3711388e-08</x>
+                                <y>1</y>
+                                <z>-7.5497901e-08</z>
+                                <w>3.3001181e-15</w>
                             </rotation>
                             <scale>
                                 <x>1</x>
@@ -11328,9 +10640,9 @@
                                 <w>1</w>
                             </rotation>
                             <scale>
-                                <x>10</x>
-                                <y>10</y>
-                                <z>10</z>
+                                <x>0.1</x>
+                                <y>0.1</y>
+                                <z>0.1</z>
                             </scale>
                         </data>
                     </component>
@@ -11595,9 +10907,9 @@
                                 <w>1</w>
                             </rotation>
                             <scale>
-                                <x>10</x>
-                                <y>10</y>
-                                <z>10</z>
+                                <x>0.1</x>
+                                <y>0.1</y>
+                                <z>0.1</z>
                             </scale>
                         </data>
                     </component>
@@ -11730,9 +11042,9 @@
                                 <w>1</w>
                             </rotation>
                             <scale>
-                                <x>10</x>
-                                <y>10</y>
-                                <z>10</z>
+                                <x>0.1</x>
+                                <y>0.1</y>
+                                <z>0.1</z>
                             </scale>
                         </data>
                     </component>
@@ -12051,9 +11363,9 @@
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
                             <position>
-                                <x>-0.15000001</x>
-                                <y>-0.2</y>
-                                <z>0.5</z>
+                                <x>-0.25</x>
+                                <y>-0.15000001</y>
+                                <z>0.34999999</z>
                             </position>
                             <rotation>
                                 <x>-7.5497901e-08</x>
@@ -12062,9 +11374,9 @@
                                 <w>5.6999333e-15</w>
                             </rotation>
                             <scale>
-                                <x>0.2</x>
-                                <y>0.2</y>
-                                <z>0.2</z>
+                                <x>0.15000001</x>
+                                <y>0.15000001</y>
+                                <z>0.15000001</z>
                             </scale>
                         </data>
                     </component>
@@ -12624,19 +11936,19 @@
                         <data>
                             <position>
                                 <x>-2.0999999</x>
-                                <y>1.367</y>
-                                <z>2.25</z>
+                                <y>1.7756909</y>
+                                <z>2.1786513</z>
                             </position>
                             <rotation>
-                                <x>-0.14385535</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>0.98959875</w>
+                                <x>-0.28227717</x>
+                                <y>0.019213209</y>
+                                <z>0.065133221</z>
+                                <w>0.95692641</w>
                             </rotation>
                             <scale>
                                 <x>10</x>
-                                <y>10</y>
-                                <z>10</z>
+                                <y>10.000002</y>
+                                <z>10.000001</z>
                             </scale>
                         </data>
                     </component>
@@ -12655,8 +11967,8 @@
                         <data>
                             <position>
                                 <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
+                                <y>-0.75770986</y>
+                                <z>1.1285337</z>
                             </position>
                             <rotation>
                                 <x>0</x>
@@ -12675,29 +11987,29 @@
                 <behaviours/>
             </actor>
             <actor>
-                <name>Broken Cargo</name>
+                <name>Cargo Colliders</name>
                 <tag></tag>
                 <active>true</active>
                 <id>314</id>
-                <parent>63</parent>
+                <parent>312</parent>
                 <components>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
                             <position>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
+                                <x>-0.11767919</x>
+                                <y>-0.24647355</y>
+                                <z>-0.049470425</z>
                             </position>
                             <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
+                                <x>-0.1505457</x>
+                                <y>0.040505543</y>
+                                <z>0.050564829</z>
+                                <w>0.98647785</w>
                             </rotation>
                             <scale>
-                                <x>1</x>
-                                <y>1</y>
+                                <x>0.99999964</x>
+                                <y>0.99999988</y>
                                 <z>1</z>
                             </scale>
                         </data>
@@ -12984,7 +12296,7 @@
                         <data>
                             <position>
                                 <x>-2.05</x>
-                                <y>0.050000001</y>
+                                <y>0.67322546</y>
                                 <z>0.34999999</z>
                             </position>
                             <rotation>
@@ -13040,8 +12352,8 @@
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
                             <position>
-                                <x>-3.3499999</x>
-                                <y>3.2</y>
+                                <x>-4.3267446</x>
+                                <y>5.7656727</y>
                                 <z>8.3500004</z>
                             </position>
                             <rotation>
@@ -13095,58 +12407,6 @@
                                 <x>-3.05</x>
                                 <y>0</y>
                                 <z>1.65</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
-                <name>Ambient Soft Smoke</name>
-                <tag></tag>
-                <active>true</active>
-                <id>323</id>
-                <parent>450</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CModelRenderer</type>
-                        <data>
-                            <model>:Models\Cube.fbx</model>
-                            <frustum_behaviour>3</frustum_behaviour>
-                            <custom_bounding_sphere_position>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </custom_bounding_sphere_position>
-                            <custom_bounding_sphere_radius>20</custom_bounding_sphere_radius>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CMaterialRenderer</type>
-                        <data>
-                            <materials>
-                                <material>Materials\FX\Ambient Soft Smoke.ovmat</material>
-                            </materials>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>-2.5</x>
-                                <y>-0.85000002</y>
-                                <z>-9.3999996</z>
                             </position>
                             <rotation>
                                 <x>0</x>
@@ -13242,7 +12502,7 @@
                                 <y>0.96567458</y>
                                 <z>1</z>
                             </color>
-                            <intensity>2</intensity>
+                            <intensity>5</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>1</quadratic>
@@ -13393,7 +12653,7 @@
                         <data>
                             <position>
                                 <x>-2.6500001</x>
-                                <y>4.3000002</y>
+                                <y>9.0253506</y>
                                 <z>13</z>
                             </position>
                             <rotation>
@@ -13627,20 +12887,6 @@
                         </data>
                     </component>
                     <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>0.1</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>5</quadratic>
-                        </data>
-                    </component>
-                    <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
                             <position>
@@ -13864,8 +13110,8 @@
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
                             <position>
-                                <x>-0.25</x>
-                                <y>1.7</y>
+                                <x>-0.22103983</x>
+                                <y>3.3512969</y>
                                 <z>1.9</z>
                             </position>
                             <rotation>
@@ -14314,58 +13560,6 @@
                                 <x>0.11</x>
                                 <y>0.92799997</y>
                                 <z>0.11</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
-                <name>Ambient Lava Smoke</name>
-                <tag></tag>
-                <active>true</active>
-                <id>352</id>
-                <parent>451</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CModelRenderer</type>
-                        <data>
-                            <model>:Models\Cube.fbx</model>
-                            <frustum_behaviour>3</frustum_behaviour>
-                            <custom_bounding_sphere_position>
-                                <x>2</x>
-                                <y>0</y>
-                                <z>5</z>
-                            </custom_bounding_sphere_position>
-                            <custom_bounding_sphere_radius>8</custom_bounding_sphere_radius>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CMaterialRenderer</type>
-                        <data>
-                            <materials>
-                                <material>Materials\Lava\Lava Smoke.ovmat</material>
-                            </materials>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>23.134001</x>
-                                <y>-7.8000002</y>
-                                <z>-8.6999998</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1.35</x>
-                                <y>1.8</y>
-                                <z>1.8</z>
                             </scale>
                         </data>
                     </component>
@@ -15006,20 +14200,6 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\Alien Marker Ball.ovmat</material>
                             </materials>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>0.1</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>5</quadratic>
                         </data>
                     </component>
                     <component>
@@ -15792,20 +14972,6 @@
                 <parent>394</parent>
                 <components>
                     <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>0.1</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>5</quadratic>
-                        </data>
-                    </component>
-                    <component>
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
@@ -16104,20 +15270,6 @@
                         </data>
                     </component>
                     <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>0.1</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>5</quadratic>
-                        </data>
-                    </component>
-                    <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
                             <position>
@@ -16364,20 +15516,6 @@
                         </data>
                     </component>
                     <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>0.1</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>5</quadratic>
-                        </data>
-                    </component>
-                    <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
                             <position>
@@ -16602,20 +15740,6 @@
                 <id>413</id>
                 <parent>410</parent>
                 <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>0.1</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>5</quadratic>
-                        </data>
-                    </component>
                     <component>
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
@@ -16884,20 +16008,6 @@
                         </data>
                     </component>
                     <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>0.1</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>5</quadratic>
-                        </data>
-                    </component>
-                    <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
                             <position>
@@ -17123,20 +16233,6 @@
                 <parent>425</parent>
                 <components>
                     <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>0.1</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>5</quadratic>
-                        </data>
-                    </component>
-                    <component>
                         <type>class OvCore::ECS::Components::CMaterialRenderer</type>
                         <data>
                             <materials>
@@ -17249,28 +16345,28 @@
                         <type>class OvCore::ECS::Components::CPointLight</type>
                         <data>
                             <color>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>0</z>
+                                <x>0.96470588</x>
+                                <y>0.650392</y>
+                                <z>0.15510957</z>
                             </color>
-                            <intensity>1</intensity>
+                            <intensity>0.17</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
-                            <quadratic>5</quadratic>
+                            <quadratic>1</quadratic>
                         </data>
                     </component>
                     <component>
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
                             <position>
-                                <x>0</x>
-                                <y>-0.017999999</y>
-                                <z>-0.141</z>
+                                <x>-2.3841858e-07</x>
+                                <y>0.058523178</y>
+                                <z>-0.29144669</z>
                             </position>
                             <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
+                                <x>-2.3248958e-11</x>
+                                <y>1.0419171e-07</y>
+                                <z>8.6001819e-09</z>
                                 <w>1</w>
                             </rotation>
                             <scale>
@@ -17493,7 +16589,7 @@
                                 <y>0.90303349</y>
                                 <z>1</z>
                             </color>
-                            <intensity>5</intensity>
+                            <intensity>1</intensity>
                             <constant>0</constant>
                             <linear>0</linear>
                             <quadratic>1</quadratic>
@@ -17506,217 +16602,6 @@
                                 <x>9.9196873</x>
                                 <y>3.2750001</y>
                                 <z>1.6827838</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
-                <name>Neon 1</name>
-                <tag></tag>
-                <active>true</active>
-                <id>437</id>
-                <parent>438</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>0.51372552</x>
-                                <y>0.9239018</y>
-                                <z>1</z>
-                            </color>
-                            <intensity>1</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>1</quadratic>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>19.78965</x>
-                                <y>3.2289138</y>
-                                <z>2.9295483</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
-                <name>Lights</name>
-                <tag></tag>
-                <active>true</active>
-                <id>438</id>
-                <parent>452</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
-                <name>Neon 2</name>
-                <tag></tag>
-                <active>true</active>
-                <id>439</id>
-                <parent>438</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>0.5529412</x>
-                                <y>0.93004131</y>
-                                <z>1</z>
-                            </color>
-                            <intensity>1</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>1</quadratic>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>28.78965</x>
-                                <y>3.2289138</y>
-                                <z>2.9295483</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
-                <name>Neon 3</name>
-                <tag></tag>
-                <active>true</active>
-                <id>440</id>
-                <parent>438</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>0.42352939</x>
-                                <y>0.90981483</y>
-                                <z>1</z>
-                            </color>
-                            <intensity>1</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>1</quadratic>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>25.851421</x>
-                                <y>3.2289138</y>
-                                <z>-3.1075001</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
-                <name>Neon 4</name>
-                <tag></tag>
-                <active>true</active>
-                <id>441</id>
-                <parent>438</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CPointLight</type>
-                        <data>
-                            <color>
-                                <x>0.5333333</x>
-                                <y>0.9277904</y>
-                                <z>1</z>
-                            </color>
-                            <intensity>1</intensity>
-                            <constant>0</constant>
-                            <linear>0</linear>
-                            <quadratic>1</quadratic>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>25.794756</x>
-                                <y>3.2289138</y>
-                                <z>8.9192991</z>
                             </position>
                             <rotation>
                                 <x>0</x>
@@ -17859,84 +16744,6 @@
                 <behaviours/>
             </actor>
             <actor>
-                <name>VFX</name>
-                <tag></tag>
-                <active>true</active>
-                <id>452</id>
-                <parent>23</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
-                <name>Lava Ambient</name>
-                <tag></tag>
-                <active>true</active>
-                <id>453</id>
-                <parent>438</parent>
-                <components>
-                    <component>
-                        <type>class OvCore::ECS::Components::CAmbientBoxLight</type>
-                        <data>
-                            <color>
-                                <x>1</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </color>
-                            <intensity>0.02</intensity>
-                            <size>
-                                <x>8.1000004</x>
-                                <y>6.1999998</y>
-                                <z>11.5</z>
-                            </size>
-                        </data>
-                    </component>
-                    <component>
-                        <type>class OvCore::ECS::Components::CTransform</type>
-                        <data>
-                            <position>
-                                <x>24.344</x>
-                                <y>0</y>
-                                <z>0</z>
-                            </position>
-                            <rotation>
-                                <x>0</x>
-                                <y>0</y>
-                                <z>0</z>
-                                <w>1</w>
-                            </rotation>
-                            <scale>
-                                <x>1</x>
-                                <y>1</y>
-                                <z>1</z>
-                            </scale>
-                        </data>
-                    </component>
-                </components>
-                <behaviours/>
-            </actor>
-            <actor>
                 <name>UI</name>
                 <tag></tag>
                 <active>true</active>
@@ -18012,6 +16819,96 @@
                                 <x>30.35</x>
                                 <y>0.82200003</y>
                                 <z>8.1000004</z>
+                            </position>
+                            <rotation>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                                <w>1</w>
+                            </rotation>
+                            <scale>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
+                            </scale>
+                        </data>
+                    </component>
+                </components>
+                <behaviours/>
+            </actor>
+            <actor>
+                <name>Ambient Sphere Light</name>
+                <tag></tag>
+                <active>true</active>
+                <id>458</id>
+                <parent>0</parent>
+                <components>
+                    <component>
+                        <type>class OvCore::ECS::Components::CAmbientSphereLight</type>
+                        <data>
+                            <color>
+                                <x>0.022514416</x>
+                                <y>0.66006958</y>
+                                <z>0.95686275</z>
+                            </color>
+                            <intensity>0.003</intensity>
+                            <radius>10000</radius>
+                        </data>
+                    </component>
+                    <component>
+                        <type>class OvCore::ECS::Components::CTransform</type>
+                        <data>
+                            <position>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </position>
+                            <rotation>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                                <w>1</w>
+                            </rotation>
+                            <scale>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
+                            </scale>
+                        </data>
+                    </component>
+                </components>
+                <behaviours/>
+            </actor>
+            <actor>
+                <name>Lava Ambient</name>
+                <tag></tag>
+                <active>true</active>
+                <id>459</id>
+                <parent>22</parent>
+                <components>
+                    <component>
+                        <type>class OvCore::ECS::Components::CAmbientBoxLight</type>
+                        <data>
+                            <color>
+                                <x>0.99215686</x>
+                                <y>0</y>
+                                <z>0</z>
+                            </color>
+                            <intensity>0.0099999998</intensity>
+                            <size>
+                                <x>8</x>
+                                <y>7.8000002</y>
+                                <z>12.7</z>
+                            </size>
+                        </data>
+                    </component>
+                    <component>
+                        <type>class OvCore::ECS::Components::CTransform</type>
+                        <data>
+                            <position>
+                                <x>24.177475</x>
+                                <y>0</y>
+                                <z>3.8634014</z>
                             </position>
                             <rotation>
                                 <x>0</x>

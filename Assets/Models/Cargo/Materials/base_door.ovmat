@@ -1,7 +1,8 @@
 <root>
-    <features>SPECULAR_WORKFLOW,NORMAL_MAPPING</features>
     <shader>:Shaders\Standard.ovfx</shader>
     <settings>
+        <support_orthographic>true</support_orthographic>
+        <support_perspective>true</support_perspective>
         <blendable>false</blendable>
         <backface_culling>false</backface_culling>
         <frontface_culling>false</frontface_culling>
@@ -10,7 +11,9 @@
         <color_writing>true</color_writing>
         <cast_shadows>false</cast_shadows>
         <receive_shadows>false</receive_shadows>
+        <user_interface>false</user_interface>
         <gpu_instances>1</gpu_instances>
+        <draw_order>1000</draw_order>
     </settings>
     <uniforms>
         <uniform>
@@ -38,24 +41,12 @@
             <value>Models\Cargo\Textures\base_door_ao.jpg</value>
         </uniform>
         <uniform>
-            <name>u_EnableNormalMapping</name>
-            <value>1</value>
-        </uniform>
-        <uniform>
             <name>u_Glossiness</name>
             <value>1</value>
         </uniform>
         <uniform>
             <name>u_GlossinessMap</name>
             <value>Models\Cargo\Textures\base_door_gloss.jpg</value>
-        </uniform>
-        <uniform>
-            <name>u_HeightMap</name>
-            <value>?</value>
-        </uniform>
-        <uniform>
-            <name>u_HeightScale</name>
-            <value>0</value>
         </uniform>
         <uniform>
             <name>u_MaskMap</name>
@@ -88,5 +79,5 @@
             </value>
         </uniform>
     </uniforms>
-    <features>SPECULAR_WORKFLOW</features>
+    <features>SPECULAR_WORKFLOW,NORMAL_MAPPING</features>
 </root>

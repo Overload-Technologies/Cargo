@@ -12,8 +12,8 @@
         <cast_shadows>false</cast_shadows>
         <receive_shadows>false</receive_shadows>
         <user_interface>false</user_interface>
-        <gpu_instances>500</gpu_instances>
-        <draw_order>1000</draw_order>
+        <gpu_instances>20</gpu_instances>
+        <draw_order>100</draw_order>
     </settings>
     <uniforms>
         <uniform>
@@ -35,10 +35,10 @@
         <uniform>
             <name>u_Diffuse</name>
             <value>
-                <x>0.53725493</x>
-                <y>0.97278804</y>
-                <z>1</z>
-                <w>0.2</w>
+                <x>1</x>
+                <y>15</y>
+                <z>20</z>
+                <w>1</w>
             </value>
         </uniform>
         <uniform>

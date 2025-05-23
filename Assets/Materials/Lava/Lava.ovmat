@@ -1,5 +1,5 @@
 <root>
-    <shader>Shaders\Fluid.ovfx</shader>
+    <shader>Shaders\Lava.ovfx</shader>
     <settings>
         <support_orthographic>true</support_orthographic>
         <support_perspective>true</support_perspective>
@@ -26,9 +26,9 @@
         <uniform>
             <name>u_Albedo</name>
             <value>
-                <x>4</x>
-                <y>1</y>
-                <z>1</z>
+                <x>5</x>
+                <y>5</y>
+                <z>5</z>
                 <w>1</w>
             </value>
         </uniform>
@@ -41,32 +41,36 @@
             <value>?</value>
         </uniform>
         <uniform>
-            <name>u_Amplitude</name>
-            <value>0.02</value>
+            <name>u_Emissive</name>
+            <value>
+                <x>1</x>
+                <y>0</y>
+                <z>0</z>
+            </value>
         </uniform>
         <uniform>
-            <name>u_Disparity</name>
-            <value>1000</value>
+            <name>u_EmissiveMap</name>
+            <value>Textures\Lava\Lava_005_EMISSIVE.jpg</value>
         </uniform>
         <uniform>
-            <name>u_EnableNormalMapping</name>
-            <value>1</value>
-        </uniform>
-        <uniform>
-            <name>u_Frequency</name>
-            <value>3</value>
+            <name>u_EmissiveStrength</name>
+            <value>15</value>
         </uniform>
         <uniform>
             <name>u_HeightMap</name>
-            <value>?</value>
+            <value>Textures\Lava\Lava_005_DISP.png</value>
         </uniform>
         <uniform>
             <name>u_HeightScale</name>
-            <value>0</value>
+            <value>0.059999999</value>
         </uniform>
         <uniform>
             <name>u_MaskMap</name>
             <value>?</value>
+        </uniform>
+        <uniform>
+            <name>u_MaxLayers</name>
+            <value>64</value>
         </uniform>
         <uniform>
             <name>u_Metallic</name>
@@ -77,12 +81,20 @@
             <value>?</value>
         </uniform>
         <uniform>
+            <name>u_MinLayers</name>
+            <value>8</value>
+        </uniform>
+        <uniform>
             <name>u_NormalMap</name>
             <value>Textures\Lava\Lava_005_NORM.jpg</value>
         </uniform>
         <uniform>
+            <name>u_ParallaxClipEdges</name>
+            <value>0</value>
+        </uniform>
+        <uniform>
             <name>u_Roughness</name>
-            <value>1</value>
+            <value>0</value>
         </uniform>
         <uniform>
             <name>u_RoughnessMap</name>
@@ -98,10 +110,10 @@
         <uniform>
             <name>u_TextureTiling</name>
             <value>
-                <x>10</x>
-                <y>10</y>
+                <x>6</x>
+                <y>6</y>
             </value>
         </uniform>
     </uniforms>
-    <features></features>
+    <features>PARALLAX_MAPPING,NORMAL_MAPPING</features>
 </root>

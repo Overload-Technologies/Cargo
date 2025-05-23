@@ -41,8 +41,20 @@
             <value>?</value>
         </uniform>
         <uniform>
+            <name>u_HeightMap</name>
+            <value>Models\Box\Textures\power_supply_sci_fi_box_lambert2SG_Height.png</value>
+        </uniform>
+        <uniform>
+            <name>u_HeightScale</name>
+            <value>0.02</value>
+        </uniform>
+        <uniform>
             <name>u_MaskMap</name>
             <value>?</value>
+        </uniform>
+        <uniform>
+            <name>u_MaxLayers</name>
+            <value>256</value>
         </uniform>
         <uniform>
             <name>u_Metallic</name>
@@ -53,12 +65,20 @@
             <value>Models\Box\Textures\power_supply_sci_fi_box_lambert2SG_Metallic.png</value>
         </uniform>
         <uniform>
+            <name>u_MinLayers</name>
+            <value>8</value>
+        </uniform>
+        <uniform>
             <name>u_NormalMap</name>
             <value>Models\Box\Textures\power_supply_sci_fi_box_lambert2SG_Normal.png</value>
         </uniform>
         <uniform>
+            <name>u_ParallaxClipEdges</name>
+            <value>0</value>
+        </uniform>
+        <uniform>
             <name>u_Roughness</name>
-            <value>1</value>
+            <value>0.30000001</value>
         </uniform>
         <uniform>
             <name>u_RoughnessMap</name>
@@ -79,5 +99,5 @@
             </value>
         </uniform>
     </uniforms>
-    <features>NORMAL_MAPPING</features>
+    <features>PARALLAX_MAPPING,NORMAL_MAPPING</features>
 </root>

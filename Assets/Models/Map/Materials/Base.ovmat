@@ -58,7 +58,7 @@
         </uniform>
         <uniform>
             <name>u_Roughness</name>
-            <value>0.30000001</value>
+            <value>0.25999999</value>
         </uniform>
         <uniform>
             <name>u_RoughnessMap</name>

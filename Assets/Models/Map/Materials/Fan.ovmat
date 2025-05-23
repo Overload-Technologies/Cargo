@@ -26,9 +26,9 @@
         <uniform>
             <name>u_Albedo</name>
             <value>
-                <x>0.30196077</x>
-                <y>0.30195776</y>
-                <z>0.30195776</z>
+                <x>0.5</x>
+                <y>0.5</y>
+                <z>0.5</z>
                 <w>1</w>
             </value>
         </uniform>
@@ -46,19 +46,15 @@
         </uniform>
         <uniform>
             <name>u_Metallic</name>
-            <value>0.60000002</value>
+            <value>1</value>
         </uniform>
         <uniform>
             <name>u_MetallicMap</name>
             <value>?</value>
         </uniform>
         <uniform>
-            <name>u_NormalMap</name>
-            <value>?</value>
-        </uniform>
-        <uniform>
             <name>u_Roughness</name>
-            <value>0.30000001</value>
+            <value>0.47</value>
         </uniform>
         <uniform>
             <name>u_RoughnessMap</name>
@@ -79,5 +75,5 @@
             </value>
         </uniform>
     </uniforms>
-    <features>NORMAL_MAPPING</features>
+    <features></features>
 </root>

@@ -1,15 +1,19 @@
 <root>
     <shader>Shaders\ScrollingTexture.ovfx</shader>
     <settings>
+        <support_orthographic>true</support_orthographic>
+        <support_perspective>true</support_perspective>
         <blendable>false</blendable>
         <backface_culling>true</backface_culling>
         <frontface_culling>false</frontface_culling>
         <depth_test>true</depth_test>
-        <depth_writing>true</depth_writing>
+        <depth_writing>false</depth_writing>
         <color_writing>true</color_writing>
         <cast_shadows>false</cast_shadows>
         <receive_shadows>false</receive_shadows>
+        <user_interface>false</user_interface>
         <gpu_instances>1</gpu_instances>
+        <draw_order>100</draw_order>
     </settings>
     <uniforms>
         <uniform>
@@ -47,4 +51,5 @@
             </value>
         </uniform>
     </uniforms>
+    <features></features>
 </root>

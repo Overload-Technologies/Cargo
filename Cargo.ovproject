@@ -1,10 +1,10 @@
-executable_name=Cargo
 gravity=-25.000000
+executable_name=Cargo
 x_resolution=1920
-multisampling=true
 y_resolution=1080
-start_scene=Scenes\Menu.ovscene
+multisampling=false
 fullscreen=true
+start_scene=Scenes\Menu.ovscene
 vsync=true
 samples=2
 opengl_major=4

@@ -35,9 +35,9 @@
         <uniform>
             <name>u_Diffuse</name>
             <value>
-                <x>1</x>
-                <y>0</y>
-                <z>0</z>
+                <x>5</x>
+                <y>1</y>
+                <z>1</z>
                 <w>1</w>
             </value>
         </uniform>

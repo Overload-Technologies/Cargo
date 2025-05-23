@@ -19,7 +19,7 @@
         <uniform>
             <name>u_Diffuse</name>
             <value>
-                <x>1</x>
+                <x>3</x>
                 <y>0</y>
                 <z>0</z>
                 <w>0.30000001</w>
