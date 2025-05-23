@@ -115,5 +115,5 @@
             </value>
         </uniform>
     </uniforms>
-    <features>PARALLAX_MAPPING,NORMAL_MAPPING</features>
+    <features>NORMAL_MAPPING,PARALLAX_MAPPING</features>
 </root>

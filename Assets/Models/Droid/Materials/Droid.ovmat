@@ -37,8 +37,24 @@
             <value>Models\Droid\Textures\Drone_diff.jpg</value>
         </uniform>
         <uniform>
+            <name>u_AlphaClippingThreshold</name>
+            <value>0</value>
+        </uniform>
+        <uniform>
+            <name>u_AlphaDithering</name>
+            <value>0</value>
+        </uniform>
+        <uniform>
             <name>u_AmbientOcclusionMap</name>
             <value>Models\Droid\Textures\Drone_ao.jpg</value>
+        </uniform>
+        <uniform>
+            <name>u_BuiltInGammaCorrection</name>
+            <value>0</value>
+        </uniform>
+        <uniform>
+            <name>u_BuiltInToneMapping</name>
+            <value>0</value>
         </uniform>
         <uniform>
             <name>u_Glossiness</name>

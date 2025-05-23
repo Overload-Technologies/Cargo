@@ -37,8 +37,24 @@
             <value>Models\Map\Textures\Diffuse_01.png</value>
         </uniform>
         <uniform>
+            <name>u_AlphaClippingThreshold</name>
+            <value>0</value>
+        </uniform>
+        <uniform>
+            <name>u_AlphaDithering</name>
+            <value>0</value>
+        </uniform>
+        <uniform>
             <name>u_AmbientOcclusionMap</name>
             <value>Models\Map\Textures\Ambient_01.png</value>
+        </uniform>
+        <uniform>
+            <name>u_BuiltInGammaCorrection</name>
+            <value>0</value>
+        </uniform>
+        <uniform>
+            <name>u_BuiltInToneMapping</name>
+            <value>0</value>
         </uniform>
         <uniform>
             <name>u_MaskMap</name>
