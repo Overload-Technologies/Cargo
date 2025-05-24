@@ -7,6 +7,4 @@ fullscreen=true
 start_scene=Scenes\Menu.ovscene
 vsync=true
 samples=2
-opengl_major=4
-opengl_minor=5
 dev_build=false
