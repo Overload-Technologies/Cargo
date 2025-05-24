@@ -32,12 +32,6 @@ Until now...
 
 ![CargoDemo_Screenshot_3](https://github.com/user-attachments/assets/ca2c0b2f-10f2-4bf0-9109-9a4b49f86f43)
 
-# Requirements
-- RAM: 200MB
-- OS: Windows 7
-- GPU: Graphics card supporting OpenGL 4.3
-- CPU: x64
-
 # Licence
 This project contains:
 1. **Scripts**:
