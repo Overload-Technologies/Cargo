@@ -11,6 +11,8 @@
         <color_writing>true</color_writing>
         <cast_shadows>false</cast_shadows>
         <receive_shadows>false</receive_shadows>
+        <captured_by_reflection_probes>true</captured_by_reflection_probes>
+        <receive_reflections>true</receive_reflections>
         <user_interface>false</user_interface>
         <gpu_instances>1</gpu_instances>
         <draw_order>1000</draw_order>
@@ -26,35 +28,51 @@
         <uniform>
             <name>u_Albedo</name>
             <value>
-                <x>5</x>
-                <y>5</y>
-                <z>5</z>
+                <x>0</x>
+                <y>0</y>
+                <z>0</z>
                 <w>1</w>
             </value>
         </uniform>
         <uniform>
             <name>u_AlbedoMap</name>
-            <value>Textures\Lava\Lava_005_COLOR.jpg</value>
+            <value>?</value>
+        </uniform>
+        <uniform>
+            <name>u_AlphaClippingThreshold</name>
+            <value>0</value>
+        </uniform>
+        <uniform>
+            <name>u_AlphaDithering</name>
+            <value>0</value>
         </uniform>
         <uniform>
             <name>u_AmbientOcclusionMap</name>
             <value>?</value>
         </uniform>
         <uniform>
-            <name>u_Emissive</name>
+            <name>u_BuiltInGammaCorrection</name>
+            <value>0</value>
+        </uniform>
+        <uniform>
+            <name>u_BuiltInToneMapping</name>
+            <value>0</value>
+        </uniform>
+        <uniform>
+            <name>u_EmissiveColor</name>
             <value>
                 <x>1</x>
-                <y>0</y>
-                <z>0</z>
+                <y>0.5</y>
+                <z>0.5</z>
             </value>
         </uniform>
         <uniform>
-            <name>u_EmissiveMap</name>
-            <value>Textures\Lava\Lava_005_EMISSIVE.jpg</value>
+            <name>u_EmissiveIntensity</name>
+            <value>3</value>
         </uniform>
         <uniform>
-            <name>u_EmissiveStrength</name>
-            <value>15</value>
+            <name>u_EmissiveMap</name>
+            <value>Textures\Lava\Lava_005_COLOR.jpg</value>
         </uniform>
         <uniform>
             <name>u_HeightMap</name>
@@ -62,7 +80,7 @@
         </uniform>
         <uniform>
             <name>u_HeightScale</name>
-            <value>0.059999999</value>
+            <value>0.050000001</value>
         </uniform>
         <uniform>
             <name>u_MaskMap</name>
@@ -74,7 +92,7 @@
         </uniform>
         <uniform>
             <name>u_Metallic</name>
-            <value>0</value>
+            <value>1</value>
         </uniform>
         <uniform>
             <name>u_MetallicMap</name>
@@ -93,8 +111,12 @@
             <value>0</value>
         </uniform>
         <uniform>
+            <name>u_RefractionIndex</name>
+            <value>1.5</value>
+        </uniform>
+        <uniform>
             <name>u_Roughness</name>
-            <value>0</value>
+            <value>1</value>
         </uniform>
         <uniform>
             <name>u_RoughnessMap</name>
@@ -114,6 +136,10 @@
                 <y>6</y>
             </value>
         </uniform>
+        <uniform>
+            <name>u_Transmission</name>
+            <value>0</value>
+        </uniform>
     </uniforms>
-    <features>NORMAL_MAPPING,PARALLAX_MAPPING</features>
+    <features>PARALLAX_MAPPING,NORMAL_MAPPING</features>
 </root>
