@@ -1,18 +1,11 @@
 #shader vertex
-#version 460 core
+#version 450 core
 
 layout (location = 0) in vec3 geo_Pos;
 layout (location = 1) in vec2 geo_TexCoords;
 layout (location = 2) in vec3 geo_Normal;
 
-layout (std140) uniform EngineUBO
-{
-    mat4    ubo_Model;
-    mat4    ubo_View;
-    mat4    ubo_Projection;
-    vec3    ubo_ViewPos;
-    float   ubo_Time;
-};
+#include ":Shaders/Common/Buffers/EngineUBO.ovfxh"
 
 out VS_OUT
 {
@@ -85,7 +78,7 @@ void main()
 }
 
 #shader fragment
-#version 460 core
+#version 450 core
 
 out vec4 FRAGMENT_COLOR;
 

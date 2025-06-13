@@ -11486,7 +11486,7 @@
                             <materials>
                                 <material>Materials\Misc\Energy Ball.ovmat</material>
                             </materials>
-                            <visibility_flags>7</visibility_flags>
+                            <visibility_flags>3</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -11912,7 +11912,7 @@
                             <materials>
                                 <material>Materials\FX\Energy Ball Particles.ovmat</material>
                             </materials>
-                            <visibility_flags>7</visibility_flags>
+                            <visibility_flags>3</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -17025,19 +17025,19 @@
                         <type>class OvCore::ECS::Components::CReflectionProbe</type>
                         <data>
                             <refresh_mode>0</refresh_mode>
-                            <capture_speed>1</capture_speed>
+                            <capture_speed>2</capture_speed>
                             <capture_position>
                                 <x>0</x>
-                                <y>0</y>
+                                <y>1.5</y>
                                 <z>0</z>
                             </capture_position>
                             <brightness>1</brightness>
-                            <resolution>512</resolution>
+                            <resolution>1024</resolution>
                             <influence_policy>0</influence_policy>
                             <influence_size>
-                                <x>6.5500002</x>
-                                <y>3.9000001</y>
-                                <z>10.7</z>
+                                <x>7.9000001</x>
+                                <y>3.4000001</y>
+                                <z>9.3500004</z>
                             </influence_size>
                             <box_projection>true</box_projection>
                         </data>
@@ -17046,8 +17046,8 @@
                         <type>class OvCore::ECS::Components::CTransform</type>
                         <data>
                             <position>
-                                <x>23.693001</x>
-                                <y>0.74992323</y>
+                                <x>24.243</x>
+                                <y>0.2</y>
                                 <z>2.8499999</z>
                             </position>
                             <rotation>

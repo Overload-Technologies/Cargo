@@ -11,6 +11,8 @@
         <color_writing>true</color_writing>
         <cast_shadows>false</cast_shadows>
         <receive_shadows>false</receive_shadows>
+        <captured_by_reflection_probes>true</captured_by_reflection_probes>
+        <receive_reflections>true</receive_reflections>
         <user_interface>false</user_interface>
         <gpu_instances>1</gpu_instances>
         <draw_order>1000</draw_order>
@@ -57,6 +59,22 @@
             <value>0</value>
         </uniform>
         <uniform>
+            <name>u_EmissiveColor</name>
+            <value>
+                <x>1</x>
+                <y>1</y>
+                <z>1</z>
+            </value>
+        </uniform>
+        <uniform>
+            <name>u_EmissiveIntensity</name>
+            <value>0</value>
+        </uniform>
+        <uniform>
+            <name>u_EmissiveMap</name>
+            <value>?</value>
+        </uniform>
+        <uniform>
             <name>u_MaskMap</name>
             <value>?</value>
         </uniform>
@@ -73,8 +91,12 @@
             <value>Models\Map\Textures\Normal_01.png</value>
         </uniform>
         <uniform>
+            <name>u_RefractionIndex</name>
+            <value>1.5</value>
+        </uniform>
+        <uniform>
             <name>u_Roughness</name>
-            <value>0.25999999</value>
+            <value>0.5</value>
         </uniform>
         <uniform>
             <name>u_RoughnessMap</name>
@@ -93,6 +115,10 @@
                 <x>1</x>
                 <y>1</y>
             </value>
+        </uniform>
+        <uniform>
+            <name>u_Transmission</name>
+            <value>0</value>
         </uniform>
     </uniforms>
     <features>NORMAL_MAPPING</features>
