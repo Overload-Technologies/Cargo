@@ -11367,7 +11367,7 @@
                                 <material>Models\Gun\Materials\Gun.ovmat</material>
                                 <material>Models\Gun\Materials\Gun_Emissive.ovmat</material>
                             </materials>
-                            <visibility_flags>7</visibility_flags>
+                            <visibility_flags>3</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -13799,7 +13799,7 @@
                                 <material>Models\Helmet\Materials\IronManHelmet.ovmat</material>
                                 <material>Models\Helmet\Materials\IronManHelmet.ovmat</material>
                             </materials>
-                            <visibility_flags>7</visibility_flags>
+                            <visibility_flags>3</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -13932,7 +13932,7 @@
                                 <material>Models\Helmet\Materials\IronManHelmet.ovmat</material>
                                 <material>Models\Helmet\Materials\IronManHelmet.ovmat</material>
                             </materials>
-                            <visibility_flags>7</visibility_flags>
+                            <visibility_flags>3</visibility_flags>
                         </data>
                     </component>
                     <component>
