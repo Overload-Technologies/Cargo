@@ -111,6 +111,7 @@
                                 <material>Models\Map\Materials\Neon.ovmat</material>
                                 <material>Models\Map\Materials\Glass.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -164,6 +165,7 @@
                                 <material>Models\Map\Materials\Base.ovmat</material>
                                 <material>Models\Map\Materials\Neon Off.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -217,6 +219,7 @@
                                 <material>Models\Map\Materials\Base.ovmat</material>
                                 <material>Models\Map\Materials\Neon.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -527,6 +530,7 @@
                             <materials>
                                 <material>Materials\Lava\Lava.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -6726,6 +6730,7 @@
                                 <material>Models\Map\Materials\Base.ovmat</material>
                                 <material>Models\Map\Materials\Glass.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -6784,6 +6789,7 @@
                                 <material>Models\Map\Materials\Base.ovmat</material>
                                 <material>Models\Map\Materials\Neon.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -6836,6 +6842,7 @@
                             <materials>
                                 <material>Models\Map\Materials\Base.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -6990,6 +6997,7 @@
                                 <material>Models\Map\Materials\Base.ovmat</material>
                                 <material>Models\Map\Materials\Neon.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -7213,6 +7221,7 @@
                             <materials>
                                 <material>Models\Map\Materials\Base.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -7552,6 +7561,7 @@
                                 <material>Models\Map\Materials\Base.ovmat</material>
                                 <material>Models\Map\Materials\Glass.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -7636,6 +7646,7 @@
                                 <material>Models\Map\Materials\Base.ovmat</material>
                                 <material>Models\Map\Materials\Glass.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -7857,6 +7868,7 @@
                                 <material>Models\Map\Materials\Base.ovmat</material>
                                 <material>Models\Map\Materials\Glass.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -7928,6 +7940,7 @@
                                 <material>Models\Map\Materials\Base.ovmat</material>
                                 <material>Models\Map\Materials\Glass.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -8043,6 +8056,7 @@
                                 <material>Models\Map\Materials\Base.ovmat</material>
                                 <material>Models\Map\Materials\Neon.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -8209,6 +8223,7 @@
                             <materials>
                                 <material>Models\Map\Materials\Base.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -8332,6 +8347,7 @@
                                 <material>Models\Map\Materials\Base.ovmat</material>
                                 <material>Models\Map\Materials\Neon.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -8498,6 +8514,7 @@
                             <materials>
                                 <material>Models\Map\Materials\Base.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -8701,6 +8718,7 @@
                                 <material>Models\Map\Materials\Base.ovmat</material>
                                 <material>Models\Map\Materials\Glass.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -8882,6 +8900,7 @@
                                 <material>Models\Map\Materials\Base.ovmat</material>
                                 <material>Models\Map\Materials\Glass.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -8997,6 +9016,7 @@
                                 <material>Models\Map\Materials\Base.ovmat</material>
                                 <material>Models\Map\Materials\EndNeon.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -9163,6 +9183,7 @@
                             <materials>
                                 <material>Models\Map\Materials\Base.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -9260,6 +9281,7 @@
                                 <material>Models\Map\Materials\Base.ovmat</material>
                                 <material>Models\Map\Materials\EndNeon.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -9426,6 +9448,7 @@
                             <materials>
                                 <material>Models\Map\Materials\Base.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -9629,6 +9652,7 @@
                                 <material>Models\Map\Materials\Base.ovmat</material>
                                 <material>Models\Map\Materials\Glass.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -9775,6 +9799,7 @@
                                 <material>Models\Pressure Plate\Materials\Trigger.ovmat</material>
                                 <material>Models\Map\Materials\Base.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -9934,6 +9959,7 @@
                                 <material>Models\Pressure Plate\Materials\LargeTrigger.ovmat</material>
                                 <material>Models\Map\Materials\Base.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -10044,6 +10070,7 @@
                             <materials>
                                 <material>Materials\Light Cubes\Blue.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -10118,6 +10145,7 @@
                             <materials>
                                 <material>Materials\Light Cubes\Red.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -10400,6 +10428,7 @@
                             <materials>
                                 <material>Models\Map\Materials\Fan.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -10470,6 +10499,7 @@
                             <materials>
                                 <material>Models\Map\Materials\Fan.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -10610,6 +10640,7 @@
                             <materials>
                                 <material>Models\Box\Materials\Box.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -10702,6 +10733,7 @@
                             <materials>
                                 <material>Materials\Light Cubes\Green.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -10890,6 +10922,7 @@
                             <materials>
                                 <material>Models\Box\Materials\Box.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -11012,6 +11045,7 @@
                             <materials>
                                 <material>Models\Box\Materials\Box.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -11127,6 +11161,7 @@
                                 <material>Models\Gun\Materials\Gun.ovmat</material>
                                 <material>Models\Gun\Materials\Gun_Emissive.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -11278,6 +11313,7 @@
                             <materials>
                                 <material>UI\Game\UI_Crosshair.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -11331,6 +11367,7 @@
                                 <material>Models\Gun\Materials\Gun.ovmat</material>
                                 <material>Models\Gun\Materials\Gun_Emissive.ovmat</material>
                             </materials>
+                            <visibility_flags>3</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -11449,6 +11486,7 @@
                             <materials>
                                 <material>Materials\Misc\Energy Ball.ovmat</material>
                             </materials>
+                            <visibility_flags>3</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -11497,6 +11535,7 @@
                             <materials>
                                 <material>Models\Platform\Materials\Platform.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -11873,6 +11912,7 @@
                             <materials>
                                 <material>Materials\FX\Energy Ball Particles.ovmat</material>
                             </materials>
+                            <visibility_flags>3</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -11916,6 +11956,7 @@
                                 <material>Models\Cargo\Materials\wall_albedo.ovmat</material>
                                 <material>Models\Cargo\Materials\Text_hangarA113.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -12346,6 +12387,7 @@
                             <materials>
                                 <material>Materials\FX\Smoke.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -12398,6 +12440,7 @@
                             <materials>
                                 <material>Materials\FX\Ambient Small Smoke.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -12558,6 +12601,7 @@
                             <materials>
                                 <material>UI\UI_CameraWhiteFade.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -12633,6 +12677,7 @@
                             <materials>
                                 <material>Materials\FX\Smoke.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -12747,6 +12792,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\Alien Marker.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -12884,6 +12930,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\Alien Marker Ball.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -12941,6 +12988,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\AlienBall.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -13091,6 +13139,7 @@
                             <materials>
                                 <material>Materials\FX\Smoke.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -13213,6 +13262,7 @@
                             <materials>
                                 <material>Models\Energy Tank\Materials\EnergyTank.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -13257,6 +13307,7 @@
                             <materials>
                                 <material>Models\Energy Tank\Materials\TankTubesOff.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -13322,6 +13373,7 @@
                             <materials>
                                 <material>Models\Energy Tank\Materials\TankTubesOff.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -13436,6 +13488,7 @@
                             <materials>
                                 <material>Models\Energy Tank\Materials\TankTubesOn.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -13475,6 +13528,7 @@
                             <materials>
                                 <material>Models\Energy Tank\Materials\TankTubesOn.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -13527,6 +13581,7 @@
                             <materials>
                                 <material>?</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -13677,6 +13732,7 @@
                             <materials>
                                 <material>UI\UI_CameraBlackFade.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -13743,6 +13799,7 @@
                                 <material>Models\Helmet\Materials\IronManHelmet.ovmat</material>
                                 <material>Models\Helmet\Materials\IronManHelmet.ovmat</material>
                             </materials>
+                            <visibility_flags>3</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -13875,6 +13932,7 @@
                                 <material>Models\Helmet\Materials\IronManHelmet.ovmat</material>
                                 <material>Models\Helmet\Materials\IronManHelmet.ovmat</material>
                             </materials>
+                            <visibility_flags>3</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -13953,6 +14011,7 @@
                                 <material>Models\Key Card\Materials\Button.ovmat</material>
                                 <material>Models\Key Card\Materials\Light.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -14094,6 +14153,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\Alien Marker.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -14200,6 +14260,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\Alien Marker Ball.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -14257,6 +14318,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\AlienBall.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -14310,6 +14372,7 @@
                                 <material>Models\Droid\Materials\Droid.ovmat</material>
                                 <material>Models\Cargo\Materials\Empty.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -14452,6 +14515,7 @@
                             <materials>
                                 <material>Materials\FX\Smoke.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -14632,6 +14696,7 @@
                             <materials>
                                 <material>UI\Game\UI_Location.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -14684,6 +14749,7 @@
                             <materials>
                                 <material>UI\Game\UI_Grab.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -14749,6 +14815,7 @@
                             <materials>
                                 <material>UI\Game\UI_Attract.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -14801,6 +14868,7 @@
                             <materials>
                                 <material>UI\Game\UI_Throw.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -14871,6 +14939,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\Alien Marker.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -14977,6 +15046,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\Alien Marker Ball.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -15034,6 +15104,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\AlienBall.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -15161,6 +15232,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\Alien Marker.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -15267,6 +15339,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\Alien Marker Ball.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -15324,6 +15397,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\AlienBall.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -15407,6 +15481,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\Alien Marker.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -15513,6 +15588,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\Alien Marker Ball.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -15570,6 +15646,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\AlienBall.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -15640,6 +15717,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\Alien Marker.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -15746,6 +15824,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\Alien Marker Ball.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -15803,6 +15882,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\AlienBall.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -15899,6 +15979,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\Alien Marker.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -16005,6 +16086,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\Alien Marker Ball.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -16062,6 +16144,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\AlienBall.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -16132,6 +16215,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\Alien Marker.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -16238,6 +16322,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\Alien Marker Ball.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -16295,6 +16380,7 @@
                             <materials>
                                 <material>Models\Alien Marker\Materials\AlienBall.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -16428,6 +16514,7 @@
                             <materials>
                                 <material>UI\Game\UI_LowEnergy.ovmat</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -16485,6 +16572,7 @@
                             <materials>
                                 <material>?</material>
                             </materials>
+                            <visibility_flags>7</visibility_flags>
                         </data>
                     </component>
                     <component>
@@ -16909,6 +16997,58 @@
                                 <x>24.177475</x>
                                 <y>0</y>
                                 <z>3.8634014</z>
+                            </position>
+                            <rotation>
+                                <x>0</x>
+                                <y>0</y>
+                                <z>0</z>
+                                <w>1</w>
+                            </rotation>
+                            <scale>
+                                <x>1</x>
+                                <y>1</y>
+                                <z>1</z>
+                            </scale>
+                        </data>
+                    </component>
+                </components>
+                <behaviours/>
+            </actor>
+            <actor>
+                <name>Reflection Probe</name>
+                <tag></tag>
+                <active>true</active>
+                <id>460</id>
+                <parent>0</parent>
+                <components>
+                    <component>
+                        <type>class OvCore::ECS::Components::CReflectionProbe</type>
+                        <data>
+                            <refresh_mode>0</refresh_mode>
+                            <capture_speed>2</capture_speed>
+                            <capture_position>
+                                <x>0</x>
+                                <y>1.5</y>
+                                <z>0</z>
+                            </capture_position>
+                            <brightness>1</brightness>
+                            <resolution>1024</resolution>
+                            <influence_policy>0</influence_policy>
+                            <influence_size>
+                                <x>7.9000001</x>
+                                <y>3.4000001</y>
+                                <z>9.3500004</z>
+                            </influence_size>
+                            <box_projection>true</box_projection>
+                        </data>
+                    </component>
+                    <component>
+                        <type>class OvCore::ECS::Components::CTransform</type>
+                        <data>
+                            <position>
+                                <x>24.243</x>
+                                <y>0.2</y>
+                                <z>2.8499999</z>
                             </position>
                             <rotation>
                                 <x>0</x>

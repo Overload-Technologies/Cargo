@@ -1,12 +1,10 @@
 #pass SHADOW_PASS
+#pass REFLECTION_PASS
 
 #feature PARALLAX_MAPPING
-// #feature ALPHA_CLIPPING
-// #feature ALPHA_DITHERING
 #feature NORMAL_MAPPING
-// #feature DISTANCE_FADE
-// #feature SPECULAR_WORKFLOW
-// #feature GAMMA_CORRECTION
+#feature DISTANCE_FADE
+#feature SPECULAR_WORKFLOW
 
 #shader vertex
 #version 450 core
@@ -51,6 +49,13 @@ void main()
 #shader fragment
 #version 450 core
 
+#if defined(REFLECTION_PASS)
+// Disable IBL for the reflection capture pass, otherwise reflective objects will
+// bounce infinitely, causing some artifacts. This define must be set before the PBR
+// shader is included, so it must be defined here.
+#define DISABLE_IMAGE_BASED_LIGHTING
+#endif
+
 #include ":Shaders/Common/Buffers/EngineUBO.ovfxh"
 #include ":Shaders/Lighting/PBR.ovfxh"
 
@@ -72,6 +77,10 @@ uniform vec4 u_Albedo = vec4(1.0);
 uniform sampler2D u_AmbientOcclusionMap;
 uniform sampler2D u_MaskMap;
 
+uniform sampler2D u_EmissiveMap;
+uniform vec3 u_EmissiveColor = vec3(1.0, 1.0, 1.0);
+uniform float u_EmissiveIntensity = 0.0;
+
 #if defined(SPECULAR_WORKFLOW)
 uniform sampler2D u_SpecularMap;
 uniform float u_Specular = 1.0;
@@ -84,6 +93,9 @@ uniform sampler2D u_RoughnessMap;
 uniform float u_Roughness = 1.0;
 #endif
 
+uniform float u_RefractionIndex = 1.5; // 1.0 = air, 1.33 = water, 1.5 = glass, etc.
+uniform float u_Transmission = 0.0; // 0.0 = opaque, 1.0 = fully transmissive
+
 #if defined(NORMAL_MAPPING)
 uniform sampler2D u_NormalMap;
 #endif
@@ -94,10 +106,6 @@ uniform float u_HeightScale = 0.05;
 uniform bool u_ParallaxClipEdges = false;
 uniform int u_MinLayers = 8;
 uniform int u_MaxLayers = 64;
-#endif
-
-#if defined(ALPHA_CLIPPING)
-uniform float u_AlphaClippingThreshold = 0.1;
 #endif
 
 #if defined(SHADOW_PASS)
@@ -113,12 +121,16 @@ uniform float u_DistanceFadeLength = 10.0;
 uniform vec2 u_TextureTiling = vec2(1.0, 1.0);
 uniform vec2 u_TextureOffset = vec2(0.0, 0.0);
 
+uniform float u_AlphaClippingThreshold = 0.0;
+uniform bool u_AlphaDithering = false;
+
+// Useful when no post-processing is applied.
+uniform bool u_BuiltInToneMapping = false;
+uniform bool u_BuiltInGammaCorrection = false;
+
 uniform sampler2D _ShadowMap;
 uniform mat4 _LightSpaceMatrix;
-
-uniform sampler2D u_EmissiveMap;
-uniform vec3 u_Emissive = vec3(0.0);
-uniform float u_EmissiveStrength = 1.0;
+uniform samplerCube _EnvironmentMap;
 
 out vec4 FRAGMENT_COLOR;
 
@@ -156,20 +168,15 @@ void main()
     }
 #else
 
-#if defined(ALPHA_CLIPPING)
     if (albedo.a < u_AlphaClippingThreshold)
     {
         discard;
     }
-#endif
 
-#if defined(ALPHA_DITHERING)
-    const float ditheredAlpha = Dithering(albedo.a, gl_FragCoord.xy);
-    if (ditheredAlpha < 0)
+    if (u_AlphaDithering && Dithering(albedo.a, gl_FragCoord.xy) < 0)
     {
         discard;
     }
-#endif
 
 #if defined(NORMAL_MAPPING)
     const vec3 normal = ComputeNormal(texCoords, fs_in.Normal, u_NormalMap, fs_in.TBN);
@@ -198,15 +205,20 @@ void main()
         ubo_ViewPos,
         fs_in.FragPos,
         _ShadowMap,
-        _LightSpaceMatrix
+        _LightSpaceMatrix,
+        _EnvironmentMap,
+        u_Transmission,
+        u_RefractionIndex
     );
 
-    vec3 emissive = u_Emissive * texture(u_EmissiveMap, texCoords).rgb * u_EmissiveStrength;
+    // Simple built-in tonemapping (Reinhard) and gamma correction for elements
+    // not affected by post-processing (e.g. debug, UI, etc.), but still aiming
+    // to approximate the final PBR look.
+    pbr = mix(pbr, pbr / (pbr + vec3(1.0)), u_BuiltInToneMapping);
+    pbr = mix(pbr, pow(pbr, vec3(1.0 / 2.2)), u_BuiltInGammaCorrection);
+
+    const vec3 emissive = texture(u_EmissiveMap, texCoords).rgb * u_EmissiveColor * u_EmissiveIntensity;
     pbr += emissive;
-    
-#if defined(GAMMA_CORRECTION)
-    pbr = pow(pbr, vec3(1.0 / 2.2));
-#endif
 
     FRAGMENT_COLOR = vec4(pbr, albedo.a);
 #endif
